@@ -1,0 +1,108 @@
+[
+  {
+    "id": "ancestral_broth",
+    "name": "祖传老汤",
+    "emoji": "🥘",
+    "rarity": "uncommon",
+    "rule": "dish_payout_plus",
+    "params": {
+      "value": 1
+    },
+    "desc": "所有料理结算+1 黑作坊核心资产"
+  },
+  {
+    "id": "beauty_filter",
+    "name": "美颜滤镜",
+    "emoji": "✨",
+    "rarity": "uncommon",
+    "rule": "weird_immune_review",
+    "params": {},
+    "desc": "所有黑暗料理免疫差评扣分 照骗"
+  },
+  {
+    "id": "paid_poop",
+    "name": "带薪拉屎",
+    "emoji": "🚽",
+    "rarity": "common",
+    "rule": "spawn_on_start",
+    "params": {
+      "symbol": "poop"
+    },
+    "desc": "每天开局必出1个屎符号 摸鱼的艺术"
+  },
+  {
+    "id": "karoshi_buff",
+    "name": "996福报",
+    "emoji": "🔥",
+    "rarity": "rare",
+    "rule": "worker_no_tire_drain",
+    "params": {
+      "freshDrain": 1
+    },
+    "desc": "牛马永不过劳 但每天多掉1点新鲜感"
+  },
+  {
+    "id": "tech_recipe",
+    "name": "科技狠活配方表",
+    "emoji": "📋",
+    "rarity": "uncommon",
+    "rule": "gutter_no_review",
+    "params": {},
+    "desc": "地沟油不再降好评 没有良心了"
+  },
+  {
+    "id": "freezer",
+    "name": "冷冻库",
+    "emoji": "❄️",
+    "rarity": "common",
+    "rule": "fresh_decay_reduce",
+    "params": {
+      "value": 2
+    },
+    "desc": "食材保鲜 每天新鲜感少掉2点"
+  },
+  {
+    "id": "chef_diploma",
+    "name": "厨师证",
+    "emoji": "📜",
+    "rarity": "rare",
+    "rule": "dish_payout_mult",
+    "params": {
+      "value": 1.3
+    },
+    "desc": "所有料理结算×1.3 持证上岗"
+  },
+  {
+    "id": "loyal_customer",
+    "name": "回头客",
+    "emoji": "🧑",
+    "rarity": "uncommon",
+    "rule": "common_symbol_plus",
+    "params": {
+      "value": 1
+    },
+    "desc": "所有普通食材+1 街坊熟客"
+  },
+  {
+    "id": "overtime_pay",
+    "name": "加班费",
+    "emoji": "💵",
+    "rarity": "uncommon",
+    "rule": "worker_payout_plus",
+    "params": {
+      "value": 2
+    },
+    "desc": "所有牛马符号+2 难得的良心"
+  },
+  {
+    "id": "gold_register",
+    "name": "黄金收银台",
+    "emoji": "💳",
+    "rarity": "rare",
+    "rule": "all_payout_plus",
+    "params": {
+      "value": 2
+    },
+    "desc": "所有符号结算+2 财源广进"
+  }
+]

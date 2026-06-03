@@ -1,0 +1,2457 @@
+[
+  {
+    "id": "rice",
+    "name": "白米饭",
+    "emoji": "🍚",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "一切的根基 牛马的主食"
+  },
+  {
+    "id": "egg",
+    "name": "鸡蛋",
+    "emoji": "🥚",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "平平无奇但哪都能搭"
+  },
+  {
+    "id": "chili",
+    "name": "辣椒",
+    "emoji": "🌶️",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 1,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "让相邻食材变得带劲 +1"
+  },
+  {
+    "id": "coffee",
+    "name": "咖啡",
+    "emoji": "☕",
+    "rarity": "common",
+    "tags": [
+      "food",
+      "worker"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "给相邻牛马续命 让其更卖力"
+  },
+  {
+    "id": "worker",
+    "name": "牛马",
+    "emoji": "🐂",
+    "rarity": "common",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "看到料理就来劲 相邻料理+2"
+  },
+  {
+    "id": "intestine",
+    "name": "大肠",
+    "emoji": "🌭",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "化腐朽为神奇的前提"
+  },
+  {
+    "id": "pig_trotter",
+    "name": "猪蹄",
+    "emoji": "🦶",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "隆江猪脚饭的灵魂"
+  },
+  {
+    "id": "tomato",
+    "name": "番茄",
+    "emoji": "🍅",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "egg"
+      ],
+      "bonus": 3,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "遇到鸡蛋封神 +3"
+  },
+  {
+    "id": "onion",
+    "name": "洋葱",
+    "emoji": "🧅",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "切它会哭 但很香"
+  },
+  {
+    "id": "garlic",
+    "name": "大蒜",
+    "emoji": "🧄",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 1,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "提味 相邻食材+1"
+  },
+  {
+    "id": "noodle",
+    "name": "面条",
+    "emoji": "🍜",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "嗦一口 续命"
+  },
+  {
+    "id": "bread",
+    "name": "面包",
+    "emoji": "🍞",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "廉价管饱"
+  },
+  {
+    "id": "potato",
+    "name": "土豆",
+    "emoji": "🥔",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "counter",
+    "effectParams": {
+      "growth": 1
+    },
+    "weird": false,
+    "desc": "放越久发芽越多 每次+1"
+  },
+  {
+    "id": "corn",
+    "name": "玉米",
+    "emoji": "🌽",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "啃得满嘴都是"
+  },
+  {
+    "id": "carrot",
+    "name": "胡萝卜",
+    "emoji": "🥕",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "养生 但没人爱吃"
+  },
+  {
+    "id": "shrimp",
+    "name": "虾",
+    "emoji": "🦐",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "鲜 但壳难剥"
+  },
+  {
+    "id": "fish",
+    "name": "鱼",
+    "emoji": "🐟",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "cat"
+      ],
+      "bonus": 4,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "旁边有猫会被惦记 +4"
+  },
+  {
+    "id": "meat",
+    "name": "五花肉",
+    "emoji": "🥓",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "肥瘦相间 罪恶但快乐"
+  },
+  {
+    "id": "chicken_leg",
+    "name": "鸡腿",
+    "emoji": "🍗",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 3,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "干饭人的最爱"
+  },
+  {
+    "id": "mushroom",
+    "name": "蘑菇",
+    "emoji": "🍄",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.85,
+      "jackpot": 3,
+      "fail": -2
+    },
+    "weird": true,
+    "desc": "大概率好吃 小概率送走自己"
+  },
+  {
+    "id": "poop",
+    "name": "屎",
+    "emoji": "💩",
+    "rarity": "common",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 0,
+    "effectType": "destroy",
+    "effectParams": {
+      "consumeTags": [
+        "intestine"
+      ],
+      "mult": 0,
+      "payout": 0
+    },
+    "weird": true,
+    "desc": "九转大肠的原料 单独毫无价值"
+  },
+  {
+    "id": "cockroach",
+    "name": "蟑螂",
+    "emoji": "🪳",
+    "rarity": "common",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 1,
+    "effectType": "breed",
+    "effectParams": {
+      "spawn": "cockroach",
+      "everyDays": 4
+    },
+    "weird": true,
+    "desc": "打不死的小强 每4天繁殖一只"
+  },
+  {
+    "id": "gutter_oil",
+    "name": "地沟油",
+    "emoji": "🛢️",
+    "rarity": "common",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 2,
+      "target": "adjacent",
+      "sideEffect": "review_down"
+    },
+    "weird": true,
+    "desc": "科技与狠活 相邻食材+2但掉好评"
+  },
+  {
+    "id": "expired",
+    "name": "过期食材",
+    "emoji": "📅",
+    "rarity": "common",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 2,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.6,
+      "jackpot": 4,
+      "fail": -3
+    },
+    "weird": true,
+    "desc": "赌一把没坏 输了拉肚子"
+  },
+  {
+    "id": "intern",
+    "name": "实习生",
+    "emoji": "🧑‍🎓",
+    "rarity": "common",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 1,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "免费劳动力 给相邻牛马打下手"
+  },
+  {
+    "id": "takeout_guy",
+    "name": "外卖员",
+    "emoji": "🛵",
+    "rarity": "common",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 3,
+      "target": "adjacent",
+      "sideEffect": "deliver"
+    },
+    "weird": false,
+    "desc": "把相邻料理送出去 +3"
+  },
+  {
+    "id": "boss",
+    "name": "老板",
+    "emoji": "👔",
+    "rarity": "common",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 1,
+    "effectType": "counter",
+    "effectParams": {
+      "growth": 1
+    },
+    "weird": false,
+    "desc": "每营业一天就更剥削 自身永久+1"
+  },
+  {
+    "id": "thumbs_down",
+    "name": "差评",
+    "emoji": "👎",
+    "rarity": "common",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 0,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": -2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "攻击相邻料理 -2"
+  },
+  {
+    "id": "thumbs_up",
+    "name": "点赞",
+    "emoji": "👍",
+    "rarity": "common",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "给相邻料理点赞 +2"
+  },
+  {
+    "id": "qrcode",
+    "name": "二维码",
+    "emoji": "🔳",
+    "rarity": "common",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 1,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "扫一扫 关注公众号领鸡腿"
+  },
+  {
+    "id": "phone",
+    "name": "手机",
+    "emoji": "📱",
+    "rarity": "common",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 1,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "摸鱼神器 牛马看了+1"
+  },
+  {
+    "id": "salt",
+    "name": "盐",
+    "emoji": "🧂",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 1,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "百味之首 相邻+1"
+  },
+  {
+    "id": "water",
+    "name": "白开水",
+    "emoji": "💧",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 0,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "免费 但寡淡如牛马的人生"
+  },
+  {
+    "id": "cat",
+    "name": "猫",
+    "emoji": "🐱",
+    "rarity": "common",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "fish"
+      ],
+      "bonus": 2,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "守着鱼 自身+2"
+  },
+  {
+    "id": "beer",
+    "name": "啤酒",
+    "emoji": "🍺",
+    "rarity": "common",
+    "tags": [
+      "food",
+      "worker"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "下班解压 相邻牛马+2"
+  },
+  {
+    "id": "intestine_clean",
+    "name": "处理好的肥肠",
+    "emoji": "🌀",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 4,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "九转大肠就差临门一脚"
+  },
+  {
+    "id": "hotpot",
+    "name": "火锅",
+    "emoji": "🍲",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 5,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 1,
+      "target": "self",
+      "perTag": true
+    },
+    "weird": false,
+    "desc": "每个相邻食材都给自己+1 越涮越值"
+  },
+  {
+    "id": "sushi",
+    "name": "寿司",
+    "emoji": "🍣",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 4,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "fish"
+      ],
+      "bonus": 3,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "有鱼则封神 +3"
+  },
+  {
+    "id": "dumpling",
+    "name": "饺子",
+    "emoji": "🥟",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 4,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "过年才吃 平时想都别想"
+  },
+  {
+    "id": "hamburger",
+    "name": "汉堡",
+    "emoji": "🍔",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 5,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "资本主义的圆形陷阱"
+  },
+  {
+    "id": "pizza",
+    "name": "披萨",
+    "emoji": "🍕",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 5,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "加班夜宵 相邻牛马+2"
+  },
+  {
+    "id": "fries",
+    "name": "薯条",
+    "emoji": "🍟",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "hamburger"
+      ],
+      "bonus": 4,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "有汉堡则+4 绝配"
+  },
+  {
+    "id": "sashimi",
+    "name": "刺身",
+    "emoji": "🍱",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 6,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.8,
+      "jackpot": 8,
+      "fail": 0
+    },
+    "weird": false,
+    "desc": "新鲜则爆 不新鲜寄"
+  },
+  {
+    "id": "crab",
+    "name": "螃蟹",
+    "emoji": "🦀",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 5,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "横行霸道 但好吃"
+  },
+  {
+    "id": "lobster",
+    "name": "龙虾",
+    "emoji": "🦞",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 7,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "牛马一年吃一次的奢侈"
+  },
+  {
+    "id": "honey",
+    "name": "蜂蜜",
+    "emoji": "🍯",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "甜到忧伤 相邻+2"
+  },
+  {
+    "id": "cheese",
+    "name": "芝士",
+    "emoji": "🧀",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 4,
+    "effectType": "counter",
+    "effectParams": {
+      "growth": 2
+    },
+    "weird": false,
+    "desc": "越陈越香 每次+2"
+  },
+  {
+    "id": "maggot",
+    "name": "蛆",
+    "emoji": "🐛",
+    "rarity": "uncommon",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 3,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.5,
+      "jackpot": 12,
+      "fail": -5
+    },
+    "weird": true,
+    "desc": "蛋白质拉满 看你敢不敢"
+  },
+  {
+    "id": "mystery_meat",
+    "name": "不明肉块",
+    "emoji": "🍖",
+    "rarity": "uncommon",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 5,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.7,
+      "jackpot": 9,
+      "fail": -4
+    },
+    "weird": true,
+    "desc": "别问是什么肉 问就是科技"
+  },
+  {
+    "id": "spit",
+    "name": "口水",
+    "emoji": "💦",
+    "rarity": "uncommon",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 3,
+      "target": "adjacent",
+      "sideEffect": "review_down"
+    },
+    "weird": true,
+    "desc": "后厨の秘密调料 相邻料理+3但掉好评"
+  },
+  {
+    "id": "manager",
+    "name": "主管",
+    "emoji": "🧑‍💼",
+    "rarity": "uncommon",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 3,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "画饼大师 让相邻牛马+3"
+  },
+  {
+    "id": "hr",
+    "name": "人事",
+    "emoji": "💼",
+    "rarity": "uncommon",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": -1,
+      "target": "adjacent",
+      "selfBonus": 4
+    },
+    "weird": false,
+    "desc": "优化别人 肥了自己+4"
+  },
+  {
+    "id": "overtime",
+    "name": "加班",
+    "emoji": "🌙",
+    "rarity": "uncommon",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 2,
+      "target": "adjacent",
+      "sideEffect": "worker_tire"
+    },
+    "weird": false,
+    "desc": "相邻牛马+2但可能过劳消失"
+  },
+  {
+    "id": "salary",
+    "name": "工资",
+    "emoji": "💴",
+    "rarity": "uncommon",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 5,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "迟到的安慰 数额感人"
+  },
+  {
+    "id": "influencer",
+    "name": "网红",
+    "emoji": "🤳",
+    "rarity": "uncommon",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "weird"
+      ],
+      "bonus": 0,
+      "target": "adjacent",
+      "mult": 3
+    },
+    "weird": false,
+    "desc": "探店黑暗料理 丑得出片×3"
+  },
+  {
+    "id": "livestream",
+    "name": "直播",
+    "emoji": "📹",
+    "rarity": "uncommon",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 3,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "边吃边播 相邻料理+3"
+  },
+  {
+    "id": "review_5star",
+    "name": "五星好评",
+    "emoji": "⭐",
+    "rarity": "uncommon",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 4,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 4,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "水军刷的 相邻料理+4"
+  },
+  {
+    "id": "red_packet",
+    "name": "红包",
+    "emoji": "🧧",
+    "rarity": "uncommon",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 4,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.5,
+      "jackpot": 10,
+      "fail": 1
+    },
+    "weird": false,
+    "desc": "手气最佳 或一分钱"
+  },
+  {
+    "id": "discount",
+    "name": "打折",
+    "emoji": "🏷️",
+    "rarity": "uncommon",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 3,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "薄利多销 相邻料理+3"
+  },
+  {
+    "id": "lucky_cat",
+    "name": "招财猫",
+    "emoji": "🐈",
+    "rarity": "uncommon",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "cyber"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "招财进宝 相邻赛博符号+2"
+  },
+  {
+    "id": "wooden_fish",
+    "name": "电子木鱼",
+    "emoji": "🪵",
+    "rarity": "uncommon",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 2,
+    "effectType": "counter",
+    "effectParams": {
+      "growth": 2
+    },
+    "weird": false,
+    "desc": "敲一下积累功德 每次+2"
+  },
+  {
+    "id": "koi",
+    "name": "锦鲤",
+    "emoji": "🐠",
+    "rarity": "uncommon",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 3,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.3,
+      "jackpot": 15,
+      "fail": 1
+    },
+    "weird": false,
+    "desc": "转发这条锦鲤 三天内有好运"
+  },
+  {
+    "id": "incense",
+    "name": "香",
+    "emoji": "🕯️",
+    "rarity": "uncommon",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "myth"
+      ],
+      "bonus": 3,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "上香 相邻玄学符号+3"
+  },
+  {
+    "id": "soy_sauce",
+    "name": "酱油",
+    "emoji": "🍶",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "打酱油的 相邻+2"
+  },
+  {
+    "id": "vinegar",
+    "name": "醋",
+    "emoji": "🧴",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dumpling"
+      ],
+      "bonus": 5,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "有饺子则+5 绝配"
+  },
+  {
+    "id": "wine",
+    "name": "白酒",
+    "emoji": "🍾",
+    "rarity": "uncommon",
+    "tags": [
+      "food",
+      "worker"
+    ],
+    "baseValue": 4,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "boss"
+      ],
+      "bonus": 4,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "陪老板喝 相邻老板+4"
+  },
+  {
+    "id": "energy_drink",
+    "name": "红牛",
+    "emoji": "🥤",
+    "rarity": "uncommon",
+    "tags": [
+      "food",
+      "worker"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 3,
+      "target": "adjacent",
+      "rule": "no_tire"
+    },
+    "weird": false,
+    "desc": "你的能量超乎你想象 牛马不过劳"
+  },
+  {
+    "id": "microwave",
+    "name": "微波炉",
+    "emoji": "📟",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "叮一下 相邻食材+2"
+  },
+  {
+    "id": "golden_egg",
+    "name": "黄金蛋",
+    "emoji": "🥚",
+    "rarity": "rare",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 8,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 3,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "会下金蛋的鸡生的 相邻食材+3"
+  },
+  {
+    "id": "truffle",
+    "name": "松露",
+    "emoji": "🍄",
+    "rarity": "rare",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 12,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "土里刨出来的奢侈品"
+  },
+  {
+    "id": "caviar",
+    "name": "鱼子酱",
+    "emoji": "🫧",
+    "rarity": "rare",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 12,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "sushi",
+        "sashimi"
+      ],
+      "bonus": 8,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "顶级配料 遇生鱼+8"
+  },
+  {
+    "id": "wagyu",
+    "name": "和牛",
+    "emoji": "🐮",
+    "rarity": "rare",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 15,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "入口即化 牛马吃不起的同类"
+  },
+  {
+    "id": "buffet",
+    "name": "自助餐",
+    "emoji": "🍽️",
+    "rarity": "rare",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 8,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 2,
+      "target": "self",
+      "perTag": true
+    },
+    "weird": false,
+    "desc": "每个相邻食材自身+2 扶墙进扶墙出"
+  },
+  {
+    "id": "big_boss",
+    "name": "大老板",
+    "emoji": "🤵",
+    "rarity": "rare",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 5,
+    "effectType": "counter",
+    "effectParams": {
+      "growth": 3
+    },
+    "weird": false,
+    "desc": "资本核心 每天剥削力+3"
+  },
+  {
+    "id": "ceo",
+    "name": "CEO",
+    "emoji": "👑",
+    "rarity": "rare",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 8,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 4,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "登顶人生赢家 相邻牛马+4"
+  },
+  {
+    "id": "union",
+    "name": "工会",
+    "emoji": "✊",
+    "rarity": "rare",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 4,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 3,
+      "target": "adjacent",
+      "rule": "no_tire"
+    },
+    "weird": false,
+    "desc": "团结起来 牛马不再过劳 全员+3"
+  },
+  {
+    "id": "resign",
+    "name": "辞职信",
+    "emoji": "📄",
+    "rarity": "rare",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 10,
+    "effectType": "destroy",
+    "effectParams": {
+      "consumeTags": [
+        "boss",
+        "hr"
+      ],
+      "mult": 0,
+      "payout": 15
+    },
+    "weird": true,
+    "desc": "世界那么大 撕掉老板换15块爽感"
+  },
+  {
+    "id": "gold_phone",
+    "name": "镶钻手机",
+    "emoji": "📲",
+    "rarity": "rare",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 6,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "cyber"
+      ],
+      "bonus": 4,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "炫富神器 相邻赛博+4"
+  },
+  {
+    "id": "viral",
+    "name": "爆款视频",
+    "emoji": "🔥",
+    "rarity": "rare",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 8,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 5,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "百万播放 相邻料理+5"
+  },
+  {
+    "id": "ad_revenue",
+    "name": "广告分成",
+    "emoji": "💰",
+    "rarity": "rare",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 10,
+    "effectType": "counter",
+    "effectParams": {
+      "growth": 3
+    },
+    "weird": false,
+    "desc": "睡后收入 每次+3"
+  },
+  {
+    "id": "gold_buddha",
+    "name": "黄金佛像",
+    "emoji": "🏆",
+    "rarity": "rare",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 6,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "myth"
+      ],
+      "bonus": 5,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "有求必应 相邻玄学+5"
+  },
+  {
+    "id": "dragon",
+    "name": "龙",
+    "emoji": "🐲",
+    "rarity": "rare",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 10,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.5,
+      "jackpot": 25,
+      "fail": 2
+    },
+    "weird": false,
+    "desc": "真龙天子 五五开的逆天财运"
+  },
+  {
+    "id": "lottery",
+    "name": "彩票",
+    "emoji": "🎫",
+    "rarity": "rare",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 2,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.05,
+      "jackpot": 100,
+      "fail": 0
+    },
+    "weird": false,
+    "desc": "两块钱一个发财梦"
+  },
+  {
+    "id": "fortune",
+    "name": "签文",
+    "emoji": "🎴",
+    "rarity": "rare",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 5,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "myth"
+      ],
+      "bonus": 4,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "上上签 相邻玄学+4"
+  },
+  {
+    "id": "chef_hat",
+    "name": "大厨帽",
+    "emoji": "👨‍🍳",
+    "rarity": "rare",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 6,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 5,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "米其林之手 相邻料理+5"
+  },
+  {
+    "id": "gold_chopsticks",
+    "name": "黄金筷子",
+    "emoji": "🥢",
+    "rarity": "rare",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 5,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 6,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "用它夹的菜都升级 相邻料理+6"
+  },
+  {
+    "id": "rich_second",
+    "name": "富二代",
+    "emoji": "🕶️",
+    "rarity": "rare",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 12,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "什么都不干 钱自己来"
+  },
+  {
+    "id": "gold_toilet",
+    "name": "黄金马桶",
+    "emoji": "🚽",
+    "rarity": "rare",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 10,
+    "effectType": "destroy",
+    "effectParams": {
+      "consumeTags": [
+        "gross"
+      ],
+      "mult": 2,
+      "payout": 0
+    },
+    "weird": true,
+    "desc": "把恶心系冲走 自身×2"
+  },
+  {
+    "id": "diamond",
+    "name": "钻石",
+    "emoji": "💎",
+    "rarity": "rare",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 15,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "恒久远 永流传 牛马只能看"
+  },
+  {
+    "id": "rocket",
+    "name": "火箭",
+    "emoji": "🚀",
+    "rarity": "rare",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 8,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "cyber"
+      ],
+      "bonus": 5,
+      "target": "adjacent",
+      "sideEffect": "boost"
+    },
+    "weird": false,
+    "desc": "直冲云霄 相邻赛博+5"
+  },
+  {
+    "id": "trophy",
+    "name": "奖杯",
+    "emoji": "🥇",
+    "rarity": "rare",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 9,
+    "effectType": "counter",
+    "effectParams": {
+      "growth": 2
+    },
+    "weird": false,
+    "desc": "年度最佳牛马 每次+2"
+  },
+  {
+    "id": "unicorn",
+    "name": "独角兽",
+    "emoji": "🦄",
+    "rarity": "rare",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 7,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.4,
+      "jackpot": 20,
+      "fail": 3
+    },
+    "weird": false,
+    "desc": "创业公司の幻想 四成概率上市"
+  },
+  {
+    "id": "money_tree",
+    "name": "摇钱树",
+    "emoji": "🌳",
+    "rarity": "rare",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 6,
+    "effectType": "breed",
+    "effectParams": {
+      "spawn": "salary",
+      "everyDays": 3
+    },
+    "weird": false,
+    "desc": "每3天结一张工资 牛马梦中情树"
+  },
+  {
+    "id": "phoenix",
+    "name": "凤凰",
+    "emoji": "🦅",
+    "rarity": "rare",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 10,
+    "effectType": "transform",
+    "effectParams": {
+      "requires": [
+        "dragon"
+      ],
+      "into": "dragon_phoenix"
+    },
+    "weird": false,
+    "desc": "龙凤呈祥的另一半"
+  },
+  {
+    "id": "michelin",
+    "name": "米其林星",
+    "emoji": "🌟",
+    "rarity": "rare",
+    "tags": [
+      "dish"
+    ],
+    "baseValue": 12,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": 6,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "摘星 相邻料理全部+6"
+  },
+  {
+    "id": "crypto",
+    "name": "虚拟币",
+    "emoji": "🪙",
+    "rarity": "rare",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 3,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.3,
+      "jackpot": 40,
+      "fail": -10
+    },
+    "weird": true,
+    "desc": "梭哈一夜暴富 或一夜归零"
+  },
+  {
+    "id": "private_jet",
+    "name": "私人飞机",
+    "emoji": "🛩️",
+    "rarity": "rare",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 18,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "财富自由的终极符号"
+  },
+  {
+    "id": "satellite",
+    "name": "卫星",
+    "emoji": "🛰️",
+    "rarity": "rare",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 10,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "cyber"
+      ],
+      "bonus": 3,
+      "target": "self",
+      "perTag": true
+    },
+    "weird": false,
+    "desc": "每个相邻赛博符号自身+3"
+  },
+  {
+    "id": "instant_noodle",
+    "name": "泡面",
+    "emoji": "🍥",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "牛马深夜の救赎"
+  },
+  {
+    "id": "pickle",
+    "name": "咸菜",
+    "emoji": "🥬",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "rice"
+      ],
+      "bonus": 2,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "有米饭就+2 穷人套餐"
+  },
+  {
+    "id": "soda",
+    "name": "可乐",
+    "emoji": "🥫",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "hamburger",
+        "fries"
+      ],
+      "bonus": 3,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "快乐肥宅水"
+  },
+  {
+    "id": "ice_cream",
+    "name": "冰淇淋",
+    "emoji": "🍦",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "夏天の安慰"
+  },
+  {
+    "id": "cake",
+    "name": "蛋糕",
+    "emoji": "🍰",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 4,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "画的饼终于成真了一次"
+  },
+  {
+    "id": "candy",
+    "name": "糖",
+    "emoji": "🍬",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 1,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "甜头 相邻+1"
+  },
+  {
+    "id": "milk_tea",
+    "name": "奶茶",
+    "emoji": "🧋",
+    "rarity": "uncommon",
+    "tags": [
+      "food",
+      "worker"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 3,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "续命快乐水 相邻牛马+3"
+  },
+  {
+    "id": "donut",
+    "name": "甜甜圈",
+    "emoji": "🍩",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 3,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "警察最爱 牛马解压"
+  },
+  {
+    "id": "popcorn",
+    "name": "爆米花",
+    "emoji": "🍿",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.9,
+      "jackpot": 3,
+      "fail": 0
+    },
+    "weird": false,
+    "desc": "大概率全爆开"
+  },
+  {
+    "id": "pretzel",
+    "name": "蝴蝶脆饼",
+    "emoji": "🥨",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 3,
+    "effectType": "flat",
+    "effectParams": {},
+    "weird": false,
+    "desc": "德式下酒"
+  },
+  {
+    "id": "taco",
+    "name": "塔可",
+    "emoji": "🌮",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 4,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "chili"
+      ],
+      "bonus": 4,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "有辣椒则+4"
+  },
+  {
+    "id": "ramen_egg",
+    "name": "溏心蛋",
+    "emoji": "🍳",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "noodle"
+      ],
+      "bonus": 4,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "面の灵魂伴侣"
+  },
+  {
+    "id": "bento",
+    "name": "便当",
+    "emoji": "🍱",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 5,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 3,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "牛马の午餐尊严"
+  },
+  {
+    "id": "rat",
+    "name": "老鼠",
+    "emoji": "🐀",
+    "rarity": "common",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 1,
+    "effectType": "breed",
+    "effectParams": {
+      "spawn": "rat",
+      "everyDays": 5
+    },
+    "weird": true,
+    "desc": "后厨常驻嘉宾"
+  },
+  {
+    "id": "fly",
+    "name": "苍蝇",
+    "emoji": "🪰",
+    "rarity": "common",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "dish"
+      ],
+      "bonus": -1,
+      "target": "adjacent"
+    },
+    "weird": true,
+    "desc": "挥之不去 相邻料理-1"
+  },
+  {
+    "id": "mold",
+    "name": "霉菌",
+    "emoji": "🦠",
+    "rarity": "uncommon",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 3,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.5,
+      "jackpot": 10,
+      "fail": -4
+    },
+    "weird": true,
+    "desc": "青霉素or食物中毒 赌"
+  },
+  {
+    "id": "slipper_sole",
+    "name": "拖鞋底",
+    "emoji": "🩴",
+    "rarity": "uncommon",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 4,
+    "effectType": "destroy",
+    "effectParams": {
+      "consumeTags": [
+        "meat"
+      ],
+      "mult": 2,
+      "payout": 0
+    },
+    "weird": true,
+    "desc": "假牛排の真相 吃肉×2"
+  },
+  {
+    "id": "landlord",
+    "name": "房东",
+    "emoji": "🏠",
+    "rarity": "rare",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 7,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": -2,
+      "target": "adjacent",
+      "selfBonus": 6
+    },
+    "weird": false,
+    "desc": "催租の梦魇 吸血牛马自身+6"
+  },
+  {
+    "id": "deadline",
+    "name": "deadline",
+    "emoji": "⏰",
+    "rarity": "uncommon",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 3,
+      "target": "adjacent",
+      "sideEffect": "worker_tire"
+    },
+    "weird": false,
+    "desc": "死线逼出生产力 +3但易过劳"
+  },
+  {
+    "id": "ppt",
+    "name": "PPT",
+    "emoji": "📊",
+    "rarity": "uncommon",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "boss"
+      ],
+      "bonus": 3,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "汇报神器 老板看了+3"
+  },
+  {
+    "id": "weekly_report",
+    "name": "周报",
+    "emoji": "📝",
+    "rarity": "common",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 1,
+    "effectType": "counter",
+    "effectParams": {
+      "growth": 1
+    },
+    "weird": false,
+    "desc": "写了又写 每次+1"
+  },
+  {
+    "id": "group_buy",
+    "name": "拼团",
+    "emoji": "🛒",
+    "rarity": "uncommon",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 3,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "discount"
+      ],
+      "bonus": 5,
+      "target": "self"
+    },
+    "weird": false,
+    "desc": "凑单の艺术"
+  },
+  {
+    "id": "emoji_doge",
+    "name": "狗头",
+    "emoji": "🐶",
+    "rarity": "common",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "cyber"
+      ],
+      "bonus": 1,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "狗头保命 相邻赛博+1"
+  },
+  {
+    "id": "crying_emoji",
+    "name": "emo",
+    "emoji": "😭",
+    "rarity": "common",
+    "tags": [
+      "cyber"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "牛马の精神状态 共鸣+2"
+  },
+  {
+    "id": "fortune_cat_gold",
+    "name": "黄金招财猫",
+    "emoji": "😻",
+    "rarity": "rare",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 8,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "cyber"
+      ],
+      "bonus": 4,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "顶配招财 相邻赛博+4"
+  },
+  {
+    "id": "mahjong",
+    "name": "麻将",
+    "emoji": "🀄",
+    "rarity": "uncommon",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 3,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.4,
+      "jackpot": 12,
+      "fail": 1
+    },
+    "weird": false,
+    "desc": "血战到底 四成自摸"
+  },
+  {
+    "id": "firecracker",
+    "name": "鞭炮",
+    "emoji": "🧨",
+    "rarity": "uncommon",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "myth"
+      ],
+      "bonus": 3,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "辟邪纳福 相邻玄学+3"
+  },
+  {
+    "id": "fountain",
+    "name": "喷泉",
+    "emoji": "⛲",
+    "rarity": "rare",
+    "tags": [
+      "myth"
+    ],
+    "baseValue": 5,
+    "effectType": "breed",
+    "effectParams": {
+      "spawn": "crypto",
+      "everyDays": 4
+    },
+    "weird": false,
+    "desc": "许愿池 每4天投出一枚币"
+  },
+  {
+    "id": "soup",
+    "name": "例汤",
+    "emoji": "🍵",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 1,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "rice"
+      ],
+      "bonus": 1,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "饭店标配 免费续"
+  },
+  {
+    "id": "durian",
+    "name": "榴莲",
+    "emoji": "🥭",
+    "rarity": "uncommon",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 5,
+    "effectType": "gamble",
+    "effectParams": {
+      "chance": 0.6,
+      "jackpot": 9,
+      "fail": -2
+    },
+    "weird": true,
+    "desc": "爱者狂喜 恨者退避"
+  },
+  {
+    "id": "century_egg",
+    "name": "皮蛋",
+    "emoji": "🥚",
+    "rarity": "uncommon",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 4,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "rice"
+      ],
+      "bonus": 4,
+      "target": "self"
+    },
+    "weird": true,
+    "desc": "黑暗料理界顶流 配粥+4"
+  },
+  {
+    "id": "stinky_tofu",
+    "name": "臭豆腐",
+    "emoji": "🧈",
+    "rarity": "uncommon",
+    "tags": [
+      "gross"
+    ],
+    "baseValue": 5,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "weird"
+      ],
+      "bonus": 3,
+      "target": "adjacent"
+    },
+    "weird": true,
+    "desc": "闻着臭吃着香 相邻猎奇+3"
+  },
+  {
+    "id": "golden_spatula",
+    "name": "黄金锅铲",
+    "emoji": "🍳",
+    "rarity": "rare",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 6,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "food"
+      ],
+      "bonus": 4,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "颠勺如飞 相邻食材+4"
+  },
+  {
+    "id": "boss_key",
+    "name": "老板钥匙",
+    "emoji": "🔑",
+    "rarity": "rare",
+    "tags": [
+      "worker"
+    ],
+    "baseValue": 8,
+    "effectType": "destroy",
+    "effectParams": {
+      "consumeTags": [
+        "boss",
+        "hr",
+        "landlord"
+      ],
+      "mult": 0,
+      "payout": 20
+    },
+    "weird": true,
+    "desc": "反客为主 干掉压迫者换20块"
+  },
+  {
+    "id": "roasted_duck",
+    "name": "烤鸭",
+    "emoji": "🦆",
+    "rarity": "rare",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 11,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 4,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "全聚德の牛马慰劳"
+  },
+  {
+    "id": "spicy_strip",
+    "name": "辣条",
+    "emoji": "🌶️",
+    "rarity": "common",
+    "tags": [
+      "food"
+    ],
+    "baseValue": 2,
+    "effectType": "adjacent",
+    "effectParams": {
+      "tags": [
+        "worker"
+      ],
+      "bonus": 2,
+      "target": "adjacent"
+    },
+    "weird": false,
+    "desc": "童年の味道 牛马の乡愁+2"
+  }
+]

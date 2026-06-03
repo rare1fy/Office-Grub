@@ -1,0 +1,42 @@
+[
+  {
+    "period": 1,
+    "display": 25
+  },
+  {
+    "period": 2,
+    "display": 40
+  },
+  {
+    "period": 3,
+    "display": 60
+  },
+  {
+    "period": 4,
+    "display": 95
+  },
+  {
+    "period": 5,
+    "display": 150
+  },
+  {
+    "period": 6,
+    "display": 225
+  },
+  {
+    "period": 7,
+    "display": 350
+  },
+  {
+    "period": 8,
+    "display": 540
+  },
+  {
+    "period": 9,
+    "display": 850
+  },
+  {
+    "period": 10,
+    "display": 1300
+  }
+]

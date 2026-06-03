@@ -1,0 +1,139 @@
+id,name,emoji,rarity,tags,base_value,effect_type,effect_params,weird,desc
+rice,白米饭,🍚,common,food,1,flat,{},false,一切的根基 牛马的主食
+egg,鸡蛋,🥚,common,food,1,flat,{},false,平平无奇但哪都能搭
+chili,辣椒,🌶️,common,food,1,adjacent,"{""tags"":[""food""],""bonus"":1,""target"":""adjacent""}",false,让相邻食材变得带劲 +1
+coffee,咖啡,☕,common,"food,worker",2,adjacent,"{""tags"":[""worker""],""bonus"":2,""target"":""adjacent""}",false,给相邻牛马续命 让其更卖力
+worker,牛马,🐂,common,worker,1,adjacent,"{""tags"":[""dish""],""bonus"":2,""target"":""adjacent""}",false,看到料理就来劲 相邻料理+2
+intestine,大肠,🌭,common,food,2,flat,{},false,化腐朽为神奇的前提
+pig_trotter,猪蹄,🦶,common,food,2,flat,{},false,隆江猪脚饭的灵魂
+tomato,番茄,🍅,common,food,1,adjacent,"{""tags"":[""egg""],""bonus"":3,""target"":""self""}",false,遇到鸡蛋封神 +3
+onion,洋葱,🧅,common,food,1,flat,{},false,切它会哭 但很香
+garlic,大蒜,🧄,common,food,1,adjacent,"{""tags"":[""food""],""bonus"":1,""target"":""adjacent""}",false,提味 相邻食材+1
+noodle,面条,🍜,common,food,2,flat,{},false,嗦一口 续命
+bread,面包,🍞,common,food,1,flat,{},false,廉价管饱
+potato,土豆,🥔,common,food,1,counter,"{""growth"":1}",false,放越久发芽越多 每次+1
+corn,玉米,🌽,common,food,2,flat,{},false,啃得满嘴都是
+carrot,胡萝卜,🥕,common,food,1,flat,{},false,养生 但没人爱吃
+shrimp,虾,🦐,common,food,2,flat,{},false,鲜 但壳难剥
+fish,鱼,🐟,common,food,2,adjacent,"{""tags"":[""cat""],""bonus"":4,""target"":""self""}",false,旁边有猫会被惦记 +4
+meat,五花肉,🥓,common,food,2,flat,{},false,肥瘦相间 罪恶但快乐
+chicken_leg,鸡腿,🍗,common,food,3,flat,{},false,干饭人的最爱
+mushroom,蘑菇,🍄,common,food,1,gamble,"{""chance"":0.85,""jackpot"":3,""fail"":-2}",true,大概率好吃 小概率送走自己
+poop,屎,💩,common,gross,0,destroy,"{""consumeTags"":[""intestine""],""mult"":0,""payout"":0}",true,九转大肠的原料 单独毫无价值
+cockroach,蟑螂,🪳,common,gross,1,breed,"{""spawn"":""cockroach"",""everyDays"":4}",true,打不死的小强 每4天繁殖一只
+gutter_oil,地沟油,🛢️,common,gross,3,adjacent,"{""tags"":[""food""],""bonus"":2,""target"":""adjacent"",""sideEffect"":""review_down""}",true,科技与狠活 相邻食材+2但掉好评
+expired,过期食材,📅,common,gross,2,gamble,"{""chance"":0.6,""jackpot"":4,""fail"":-3}",true,赌一把没坏 输了拉肚子
+intern,实习生,🧑‍🎓,common,worker,1,adjacent,"{""tags"":[""worker""],""bonus"":1,""target"":""adjacent""}",false,免费劳动力 给相邻牛马打下手
+takeout_guy,外卖员,🛵,common,worker,1,adjacent,"{""tags"":[""dish""],""bonus"":3,""target"":""adjacent"",""sideEffect"":""deliver""}",false,把相邻料理送出去 +3
+boss,老板,👔,common,worker,1,counter,"{""growth"":1}",false,每营业一天就更剥削 自身永久+1
+thumbs_down,差评,👎,common,cyber,0,adjacent,"{""tags"":[""dish""],""bonus"":-2,""target"":""adjacent""}",false,攻击相邻料理 -2
+thumbs_up,点赞,👍,common,cyber,1,adjacent,"{""tags"":[""dish""],""bonus"":2,""target"":""adjacent""}",false,给相邻料理点赞 +2
+qrcode,二维码,🔳,common,cyber,1,flat,{},false,扫一扫 关注公众号领鸡腿
+phone,手机,📱,common,cyber,1,adjacent,"{""tags"":[""worker""],""bonus"":1,""target"":""adjacent""}",false,摸鱼神器 牛马看了+1
+salt,盐,🧂,common,food,1,adjacent,"{""tags"":[""food""],""bonus"":1,""target"":""adjacent""}",false,百味之首 相邻+1
+water,白开水,💧,common,food,0,flat,{},false,免费 但寡淡如牛马的人生
+cat,猫,🐱,common,worker,1,adjacent,"{""tags"":[""fish""],""bonus"":2,""target"":""self""}",false,守着鱼 自身+2
+beer,啤酒,🍺,common,"food,worker",2,adjacent,"{""tags"":[""worker""],""bonus"":2,""target"":""adjacent""}",false,下班解压 相邻牛马+2
+
+intestine_clean,处理好的肥肠,🌀,uncommon,food,4,flat,{},false,九转大肠就差临门一脚
+hotpot,火锅,🍲,uncommon,food,5,adjacent,"{""tags"":[""food""],""bonus"":1,""target"":""self"",""perTag"":true}",false,每个相邻食材都给自己+1 越涮越值
+sushi,寿司,🍣,uncommon,food,4,adjacent,"{""tags"":[""fish""],""bonus"":3,""target"":""self""}",false,有鱼则封神 +3
+dumpling,饺子,🥟,uncommon,food,4,flat,{},false,过年才吃 平时想都别想
+hamburger,汉堡,🍔,uncommon,food,5,flat,{},false,资本主义的圆形陷阱
+pizza,披萨,🍕,uncommon,food,5,adjacent,"{""tags"":[""worker""],""bonus"":2,""target"":""adjacent""}",false,加班夜宵 相邻牛马+2
+fries,薯条,🍟,uncommon,food,3,adjacent,"{""tags"":[""hamburger""],""bonus"":4,""target"":""self""}",false,有汉堡则+4 绝配
+sashimi,刺身,🍱,uncommon,food,6,gamble,"{""chance"":0.8,""jackpot"":8,""fail"":0}",false,新鲜则爆 不新鲜寄
+crab,螃蟹,🦀,uncommon,food,5,flat,{},false,横行霸道 但好吃
+lobster,龙虾,🦞,uncommon,food,7,flat,{},false,牛马一年吃一次的奢侈
+honey,蜂蜜,🍯,uncommon,food,3,adjacent,"{""tags"":[""food""],""bonus"":2,""target"":""adjacent""}",false,甜到忧伤 相邻+2
+cheese,芝士,🧀,uncommon,food,4,counter,"{""growth"":2}",false,越陈越香 每次+2
+maggot,蛆,🐛,uncommon,gross,3,gamble,"{""chance"":0.5,""jackpot"":12,""fail"":-5}",true,蛋白质拉满 看你敢不敢
+mystery_meat,不明肉块,🍖,uncommon,gross,5,gamble,"{""chance"":0.7,""jackpot"":9,""fail"":-4}",true,别问是什么肉 问就是科技
+spit,口水,💦,uncommon,gross,2,adjacent,"{""tags"":[""dish""],""bonus"":3,""target"":""adjacent"",""sideEffect"":""review_down""}",true,后厨の秘密调料 相邻料理+3但掉好评
+manager,主管,🧑‍💼,uncommon,worker,3,adjacent,"{""tags"":[""worker""],""bonus"":3,""target"":""adjacent""}",false,画饼大师 让相邻牛马+3
+hr,人事,💼,uncommon,worker,2,adjacent,"{""tags"":[""worker""],""bonus"":-1,""target"":""adjacent"",""selfBonus"":4}",false,优化别人 肥了自己+4
+overtime,加班,🌙,uncommon,worker,2,adjacent,"{""tags"":[""worker""],""bonus"":2,""target"":""adjacent"",""sideEffect"":""worker_tire""}",false,相邻牛马+2但可能过劳消失
+salary,工资,💴,uncommon,worker,5,flat,{},false,迟到的安慰 数额感人
+influencer,网红,🤳,uncommon,cyber,3,adjacent,"{""tags"":[""weird""],""bonus"":0,""target"":""adjacent"",""mult"":3}",false,探店黑暗料理 丑得出片×3
+livestream,直播,📹,uncommon,cyber,3,adjacent,"{""tags"":[""dish""],""bonus"":3,""target"":""adjacent""}",false,边吃边播 相邻料理+3
+review_5star,五星好评,⭐,uncommon,cyber,4,adjacent,"{""tags"":[""dish""],""bonus"":4,""target"":""adjacent""}",false,水军刷的 相邻料理+4
+red_packet,红包,🧧,uncommon,cyber,4,gamble,"{""chance"":0.5,""jackpot"":10,""fail"":1}",false,手气最佳 或一分钱
+discount,打折,🏷️,uncommon,cyber,2,adjacent,"{""tags"":[""dish""],""bonus"":3,""target"":""adjacent""}",false,薄利多销 相邻料理+3
+lucky_cat,招财猫,🐈,uncommon,myth,3,adjacent,"{""tags"":[""cyber""],""bonus"":2,""target"":""adjacent""}",false,招财进宝 相邻赛博符号+2
+wooden_fish,电子木鱼,🪵,uncommon,myth,2,counter,"{""growth"":2}",false,敲一下积累功德 每次+2
+koi,锦鲤,🐠,uncommon,myth,3,gamble,"{""chance"":0.3,""jackpot"":15,""fail"":1}",false,转发这条锦鲤 三天内有好运
+incense,香,🕯️,uncommon,myth,2,adjacent,"{""tags"":[""myth""],""bonus"":3,""target"":""adjacent""}",false,上香 相邻玄学符号+3
+soy_sauce,酱油,🍶,uncommon,food,2,adjacent,"{""tags"":[""food""],""bonus"":2,""target"":""adjacent""}",false,打酱油的 相邻+2
+vinegar,醋,🧴,uncommon,food,2,adjacent,"{""tags"":[""dumpling""],""bonus"":5,""target"":""self""}",false,有饺子则+5 绝配
+wine,白酒,🍾,uncommon,"food,worker",4,adjacent,"{""tags"":[""boss""],""bonus"":4,""target"":""adjacent""}",false,陪老板喝 相邻老板+4
+energy_drink,红牛,🥤,uncommon,"food,worker",3,adjacent,"{""tags"":[""worker""],""bonus"":3,""target"":""adjacent"",""rule"":""no_tire""}",false,你的能量超乎你想象 牛马不过劳
+microwave,微波炉,📟,uncommon,food,2,adjacent,"{""tags"":[""food""],""bonus"":2,""target"":""adjacent""}",false,叮一下 相邻食材+2
+
+golden_egg,黄金蛋,🥚,rare,food,8,adjacent,"{""tags"":[""food""],""bonus"":3,""target"":""adjacent""}",false,会下金蛋的鸡生的 相邻食材+3
+truffle,松露,🍄,rare,food,12,flat,{},false,土里刨出来的奢侈品
+caviar,鱼子酱,🫧,rare,food,12,adjacent,"{""tags"":[""sushi"",""sashimi""],""bonus"":8,""target"":""self""}",false,顶级配料 遇生鱼+8
+wagyu,和牛,🐮,rare,food,15,flat,{},false,入口即化 牛马吃不起的同类
+buffet,自助餐,🍽️,rare,food,8,adjacent,"{""tags"":[""food""],""bonus"":2,""target"":""self"",""perTag"":true}",false,每个相邻食材自身+2 扶墙进扶墙出
+big_boss,大老板,🤵,rare,worker,5,counter,"{""growth"":3}",false,资本核心 每天剥削力+3
+ceo,CEO,👑,rare,worker,8,adjacent,"{""tags"":[""worker""],""bonus"":4,""target"":""adjacent""}",false,登顶人生赢家 相邻牛马+4
+union,工会,✊,rare,worker,4,adjacent,"{""tags"":[""worker""],""bonus"":3,""target"":""adjacent"",""rule"":""no_tire""}",false,团结起来 牛马不再过劳 全员+3
+resign,辞职信,📄,rare,worker,10,destroy,"{""consumeTags"":[""boss"",""hr""],""mult"":0,""payout"":15}",true,世界那么大 撕掉老板换15块爽感
+gold_phone,镶钻手机,📲,rare,cyber,6,adjacent,"{""tags"":[""cyber""],""bonus"":4,""target"":""adjacent""}",false,炫富神器 相邻赛博+4
+viral,爆款视频,🔥,rare,cyber,8,adjacent,"{""tags"":[""dish""],""bonus"":5,""target"":""adjacent""}",false,百万播放 相邻料理+5
+ad_revenue,广告分成,💰,rare,cyber,10,counter,"{""growth"":3}",false,睡后收入 每次+3
+gold_buddha,黄金佛像,🏆,rare,myth,6,adjacent,"{""tags"":[""myth""],""bonus"":5,""target"":""adjacent""}",false,有求必应 相邻玄学+5
+dragon,龙,🐲,rare,myth,10,gamble,"{""chance"":0.5,""jackpot"":25,""fail"":2}",false,真龙天子 五五开的逆天财运
+lottery,彩票,🎫,rare,myth,2,gamble,"{""chance"":0.05,""jackpot"":100,""fail"":0}",false,两块钱一个发财梦
+fortune,签文,🎴,rare,myth,5,adjacent,"{""tags"":[""myth""],""bonus"":4,""target"":""adjacent""}",false,上上签 相邻玄学+4
+chef_hat,大厨帽,👨‍🍳,rare,worker,6,adjacent,"{""tags"":[""dish""],""bonus"":5,""target"":""adjacent""}",false,米其林之手 相邻料理+5
+gold_chopsticks,黄金筷子,🥢,rare,food,5,adjacent,"{""tags"":[""dish""],""bonus"":6,""target"":""adjacent""}",false,用它夹的菜都升级 相邻料理+6
+rich_second,富二代,🕶️,rare,worker,12,flat,{},false,什么都不干 钱自己来
+gold_toilet,黄金马桶,🚽,rare,gross,10,destroy,"{""consumeTags"":[""gross""],""mult"":2,""payout"":0}",true,把恶心系冲走 自身×2
+diamond,钻石,💎,rare,cyber,15,flat,{},false,恒久远 永流传 牛马只能看
+rocket,火箭,🚀,rare,cyber,8,adjacent,"{""tags"":[""cyber""],""bonus"":5,""target"":""adjacent"",""sideEffect"":""boost""}",false,直冲云霄 相邻赛博+5
+trophy,奖杯,🥇,rare,worker,9,counter,"{""growth"":2}",false,年度最佳牛马 每次+2
+unicorn,独角兽,🦄,rare,myth,7,gamble,"{""chance"":0.4,""jackpot"":20,""fail"":3}",false,创业公司の幻想 四成概率上市
+money_tree,摇钱树,🌳,rare,myth,6,breed,"{""spawn"":""salary"",""everyDays"":3}",false,每3天结一张工资 牛马梦中情树
+phoenix,凤凰,🦅,rare,myth,10,transform,"{""requires"":[""dragon""],""into"":""dragon_phoenix""}",false,龙凤呈祥的另一半
+michelin,米其林星,🌟,rare,dish,12,adjacent,"{""tags"":[""dish""],""bonus"":6,""target"":""adjacent""}",false,摘星 相邻料理全部+6
+crypto,虚拟币,🪙,rare,cyber,3,gamble,"{""chance"":0.3,""jackpot"":40,""fail"":-10}",true,梭哈一夜暴富 或一夜归零
+private_jet,私人飞机,🛩️,rare,cyber,18,flat,{},false,财富自由的终极符号
+satellite,卫星,🛰️,rare,cyber,10,adjacent,"{""tags"":[""cyber""],""bonus"":3,""target"":""self"",""perTag"":true}",false,每个相邻赛博符号自身+3
+
+instant_noodle,泡面,🍥,common,food,2,flat,{},false,牛马深夜の救赎
+pickle,咸菜,🥬,common,food,1,adjacent,"{""tags"":[""rice""],""bonus"":2,""target"":""self""}",false,有米饭就+2 穷人套餐
+soda,可乐,🥫,common,food,2,adjacent,"{""tags"":[""hamburger"",""fries""],""bonus"":3,""target"":""self""}",false,快乐肥宅水
+ice_cream,冰淇淋,🍦,common,food,2,flat,{},false,夏天の安慰
+cake,蛋糕,🍰,uncommon,food,4,adjacent,"{""tags"":[""worker""],""bonus"":2,""target"":""adjacent""}",false,画的饼终于成真了一次
+candy,糖,🍬,common,food,1,adjacent,"{""tags"":[""food""],""bonus"":1,""target"":""adjacent""}",false,甜头 相邻+1
+milk_tea,奶茶,🧋,uncommon,"food,worker",3,adjacent,"{""tags"":[""worker""],""bonus"":3,""target"":""adjacent""}",false,续命快乐水 相邻牛马+3
+donut,甜甜圈,🍩,uncommon,food,3,flat,{},false,警察最爱 牛马解压
+popcorn,爆米花,🍿,common,food,2,gamble,"{""chance"":0.9,""jackpot"":3,""fail"":0}",false,大概率全爆开
+pretzel,蝴蝶脆饼,🥨,uncommon,food,3,flat,{},false,德式下酒
+taco,塔可,🌮,uncommon,food,4,adjacent,"{""tags"":[""chili""],""bonus"":4,""target"":""self""}",false,有辣椒则+4
+ramen_egg,溏心蛋,🍳,uncommon,food,3,adjacent,"{""tags"":[""noodle""],""bonus"":4,""target"":""self""}",false,面の灵魂伴侣
+bento,便当,🍱,uncommon,food,5,adjacent,"{""tags"":[""worker""],""bonus"":3,""target"":""adjacent""}",false,牛马の午餐尊严
+rat,老鼠,🐀,common,gross,1,breed,"{""spawn"":""rat"",""everyDays"":5}",true,后厨常驻嘉宾
+fly,苍蝇,🪰,common,gross,1,adjacent,"{""tags"":[""dish""],""bonus"":-1,""target"":""adjacent""}",true,挥之不去 相邻料理-1
+mold,霉菌,🦠,uncommon,gross,3,gamble,"{""chance"":0.5,""jackpot"":10,""fail"":-4}",true,青霉素or食物中毒 赌
+slipper_sole,拖鞋底,🩴,uncommon,gross,4,destroy,"{""consumeTags"":[""meat""],""mult"":2,""payout"":0}",true,假牛排の真相 吃肉×2
+landlord,房东,🏠,rare,worker,7,adjacent,"{""tags"":[""worker""],""bonus"":-2,""target"":""adjacent"",""selfBonus"":6}",false,催租の梦魇 吸血牛马自身+6
+deadline,deadline,⏰,uncommon,worker,2,adjacent,"{""tags"":[""worker""],""bonus"":3,""target"":""adjacent"",""sideEffect"":""worker_tire""}",false,死线逼出生产力 +3但易过劳
+ppt,PPT,📊,uncommon,worker,3,adjacent,"{""tags"":[""boss""],""bonus"":3,""target"":""adjacent""}",false,汇报神器 老板看了+3
+weekly_report,周报,📝,common,worker,1,counter,"{""growth"":1}",false,写了又写 每次+1
+group_buy,拼团,🛒,uncommon,cyber,3,adjacent,"{""tags"":[""discount""],""bonus"":5,""target"":""self""}",false,凑单の艺术
+emoji_doge,狗头,🐶,common,cyber,1,adjacent,"{""tags"":[""cyber""],""bonus"":1,""target"":""adjacent""}",false,狗头保命 相邻赛博+1
+crying_emoji,emo,😭,common,cyber,1,adjacent,"{""tags"":[""worker""],""bonus"":2,""target"":""adjacent""}",false,牛马の精神状态 共鸣+2
+fortune_cat_gold,黄金招财猫,😻,rare,myth,8,adjacent,"{""tags"":[""cyber""],""bonus"":4,""target"":""adjacent""}",false,顶配招财 相邻赛博+4
+mahjong,麻将,🀄,uncommon,myth,3,gamble,"{""chance"":0.4,""jackpot"":12,""fail"":1}",false,血战到底 四成自摸
+firecracker,鞭炮,🧨,uncommon,myth,2,adjacent,"{""tags"":[""myth""],""bonus"":3,""target"":""adjacent""}",false,辟邪纳福 相邻玄学+3
+fountain,喷泉,⛲,rare,myth,5,breed,"{""spawn"":""crypto"",""everyDays"":4}",false,许愿池 每4天投出一枚币
+
+soup,例汤,🍵,common,food,1,adjacent,"{""tags"":[""rice""],""bonus"":1,""target"":""adjacent""}",false,饭店标配 免费续
+durian,榴莲,🥭,uncommon,food,5,gamble,"{""chance"":0.6,""jackpot"":9,""fail"":-2}",true,爱者狂喜 恨者退避
+century_egg,皮蛋,🥚,uncommon,gross,4,adjacent,"{""tags"":[""rice""],""bonus"":4,""target"":""self""}",true,黑暗料理界顶流 配粥+4
+stinky_tofu,臭豆腐,🧈,uncommon,gross,5,adjacent,"{""tags"":[""weird""],""bonus"":3,""target"":""adjacent""}",true,闻着臭吃着香 相邻猎奇+3
+golden_spatula,黄金锅铲,🍳,rare,worker,6,adjacent,"{""tags"":[""food""],""bonus"":4,""target"":""adjacent""}",false,颠勺如飞 相邻食材+4
+boss_key,老板钥匙,🔑,rare,worker,8,destroy,"{""consumeTags"":[""boss"",""hr"",""landlord""],""mult"":0,""payout"":20}",true,反客为主 干掉压迫者换20块
+roasted_duck,烤鸭,🦆,rare,food,11,adjacent,"{""tags"":[""worker""],""bonus"":4,""target"":""adjacent""}",false,全聚德の牛马慰劳
+spicy_strip,辣条,🌶️,common,food,2,adjacent,"{""tags"":[""worker""],""bonus"":2,""target"":""adjacent""}",false,童年の味道 牛马の乡愁+2

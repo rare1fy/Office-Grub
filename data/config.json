@@ -1,0 +1,20 @@
+{
+  "grid": { "cols": 5, "rows": 4 },
+  "appetite": { "base": 25, "growth": 1.55 },
+  "period": { "daysPerPeriod": 5 },
+  "freshness": {
+    "start": 100,
+    "max": 100,
+    "baseDecay": 6,
+    "multBase": 0.5,
+    "multRange": 0.5,
+    "gainCommon": 8,
+    "gainUncommon": 15,
+    "gainRare": 30,
+    "weirdMultiplier": 2
+  },
+  "draftWeights": { "common": 70, "uncommon": 25, "rare": 5 },
+  "starterPool": ["rice", "egg", "worker", "chili", "coffee"],
+  "removeCost": 20,
+  "draftChoices": 3
+}

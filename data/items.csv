@@ -1,0 +1,11 @@
+id,name,emoji,rarity,rule,params,desc
+ancestral_broth,祖传老汤,🥘,uncommon,dish_payout_plus,"{""value"":1}",所有料理结算+1 黑作坊核心资产
+beauty_filter,美颜滤镜,✨,uncommon,weird_immune_review,{},所有黑暗料理免疫差评扣分 照骗
+paid_poop,带薪拉屎,🚽,common,spawn_on_start,"{""symbol"":""poop""}",每天开局必出1个屎符号 摸鱼的艺术
+karoshi_buff,996福报,🔥,rare,worker_no_tire_drain,"{""freshDrain"":1}",牛马永不过劳 但每天多掉1点新鲜感
+tech_recipe,科技狠活配方表,📋,uncommon,gutter_no_review,{},地沟油不再降好评 没有良心了
+freezer,冷冻库,❄️,common,fresh_decay_reduce,"{""value"":2}",食材保鲜 每天新鲜感少掉2点
+chef_diploma,厨师证,📜,rare,dish_payout_mult,"{""value"":1.3}",所有料理结算×1.3 持证上岗
+loyal_customer,回头客,🧑,uncommon,common_symbol_plus,"{""value"":1}",所有普通食材+1 街坊熟客
+overtime_pay,加班费,💵,uncommon,worker_payout_plus,"{""value"":2}",所有牛马符号+2 难得的良心
+gold_register,黄金收银台,💳,rare,all_payout_plus,"{""value"":2}",所有符号结算+2 财源广进

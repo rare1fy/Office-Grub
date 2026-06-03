@@ -1,0 +1,324 @@
+[
+  {
+    "id": "longjiang",
+    "name": "隆江猪脚饭",
+    "emoji": "🍛",
+    "rarity": "rare",
+    "kind": "eliminate",
+    "inputs": [
+      "worker",
+      "pig_trotter",
+      "rice"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 20,
+    "freshGain": 30,
+    "weird": false,
+    "desc": "牛马的命是隆江猪脚饭给的 三者消除爆20"
+  },
+  {
+    "id": "nine_intestine",
+    "name": "九转大肠",
+    "emoji": "🍢",
+    "rarity": "rare",
+    "kind": "merge",
+    "inputs": [
+      "poop",
+      "intestine"
+    ],
+    "adjacency": "orthogonal",
+    "output": "intestine_clean",
+    "payout": 15,
+    "freshGain": 30,
+    "weird": true,
+    "desc": "化腐朽为神奇 屎加大肠合成神菜"
+  },
+  {
+    "id": "tomato_egg",
+    "name": "番茄炒蛋",
+    "emoji": "🍳",
+    "rarity": "common",
+    "kind": "merge",
+    "inputs": [
+      "tomato",
+      "egg"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 6,
+    "freshGain": 8,
+    "weird": false,
+    "desc": "永远的神 新手友好基础combo"
+  },
+  {
+    "id": "gaijiao",
+    "name": "盖浇饭",
+    "emoji": "🍚",
+    "rarity": "common",
+    "kind": "merge",
+    "inputs": [
+      "rice",
+      "meat"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 5,
+    "freshGain": 8,
+    "weird": false,
+    "desc": "国民快餐 米饭加肉"
+  },
+  {
+    "id": "roach_bread",
+    "name": "法式蟑螂酥",
+    "emoji": "🥐",
+    "rarity": "uncommon",
+    "kind": "merge",
+    "inputs": [
+      "cockroach",
+      "bread"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 9,
+    "freshGain": 15,
+    "weird": true,
+    "desc": "黑暗料理 酥脆多汁"
+  },
+  {
+    "id": "tech_dish",
+    "name": "科技与狠活",
+    "emoji": "🧪",
+    "rarity": "uncommon",
+    "kind": "merge",
+    "inputs": [
+      "gutter_oil",
+      "meat"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 10,
+    "freshGain": 15,
+    "weird": true,
+    "desc": "地沟油加肉 产出翻倍但良心不安"
+  },
+  {
+    "id": "cant_tell",
+    "name": "分不清",
+    "emoji": "🍫",
+    "rarity": "uncommon",
+    "kind": "merge",
+    "inputs": [
+      "poop",
+      "candy"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 12,
+    "freshGain": 15,
+    "weird": true,
+    "desc": "屎加糖 你自己品 高产出"
+  },
+  {
+    "id": "dragon_phoenix",
+    "name": "龙凤呈祥",
+    "emoji": "🐉",
+    "rarity": "rare",
+    "kind": "merge",
+    "inputs": [
+      "dragon",
+      "phoenix"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 40,
+    "freshGain": 30,
+    "weird": false,
+    "desc": "顶级祥瑞 龙凤合体爆40"
+  },
+  {
+    "id": "boss_special",
+    "name": "给老板上一道",
+    "emoji": "🍽️",
+    "rarity": "uncommon",
+    "kind": "synergy",
+    "inputs": [
+      "boss",
+      "poop"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 8,
+    "freshGain": 15,
+    "weird": true,
+    "desc": "整顿职场 本轮老板产出翻倍"
+  },
+  {
+    "id": "sashimi_combo",
+    "name": "豪华刺身拼盘",
+    "emoji": "🍣",
+    "rarity": "rare",
+    "kind": "merge",
+    "inputs": [
+      "sashimi",
+      "caviar"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 25,
+    "freshGain": 30,
+    "weird": false,
+    "desc": "顶配生鲜 刺身加鱼子酱"
+  },
+  {
+    "id": "hotpot_feast",
+    "name": "火锅盛宴",
+    "emoji": "🍲",
+    "rarity": "uncommon",
+    "kind": "merge",
+    "inputs": [
+      "hotpot",
+      "meat"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 12,
+    "freshGain": 15,
+    "weird": false,
+    "desc": "涮起来 火锅加肉"
+  },
+  {
+    "id": "midnight_snack",
+    "name": "深夜食堂",
+    "emoji": "🌃",
+    "rarity": "uncommon",
+    "kind": "synergy",
+    "inputs": [
+      "overtime",
+      "instant_noodle"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 10,
+    "freshGain": 15,
+    "weird": false,
+    "desc": "加班加泡面 牛马の深夜慰藉"
+  },
+  {
+    "id": "sushi_set",
+    "name": "寿司套餐",
+    "emoji": "🍣",
+    "rarity": "uncommon",
+    "kind": "merge",
+    "inputs": [
+      "sushi",
+      "fish"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 11,
+    "freshGain": 15,
+    "weird": false,
+    "desc": "有鱼的寿司 升级"
+  },
+  {
+    "id": "dumpling_vinegar",
+    "name": "饺子蘸醋",
+    "emoji": "🥟",
+    "rarity": "common",
+    "kind": "synergy",
+    "inputs": [
+      "dumpling",
+      "vinegar"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 8,
+    "freshGain": 8,
+    "weird": false,
+    "desc": "绝配 饺子加醋"
+  },
+  {
+    "id": "burger_combo",
+    "name": "汉堡套餐",
+    "emoji": "🍔",
+    "rarity": "uncommon",
+    "kind": "merge",
+    "inputs": [
+      "hamburger",
+      "fries"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 12,
+    "freshGain": 15,
+    "weird": false,
+    "desc": "汉堡薯条可乐 资本主义套餐"
+  },
+  {
+    "id": "stink_legend",
+    "name": "臭味相投",
+    "emoji": "💨",
+    "rarity": "rare",
+    "kind": "merge",
+    "inputs": [
+      "stinky_tofu",
+      "century_egg"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 18,
+    "freshGain": 30,
+    "weird": true,
+    "desc": "臭豆腐加皮蛋 黑暗料理届の珠峰"
+  },
+  {
+    "id": "viral_dish",
+    "name": "网红爆款菜",
+    "emoji": "📸",
+    "rarity": "rare",
+    "kind": "synergy",
+    "inputs": [
+      "influencer",
+      "cant_tell"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 22,
+    "freshGain": 30,
+    "weird": true,
+    "desc": "网红探店分不清 丑得出圈"
+  },
+  {
+    "id": "crypto_dream",
+    "name": "财富自由",
+    "emoji": "💸",
+    "rarity": "rare",
+    "kind": "merge",
+    "inputs": [
+      "crypto",
+      "diamond"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 30,
+    "freshGain": 30,
+    "weird": false,
+    "desc": "梭哈成功 虚拟币加钻石"
+  },
+  {
+    "id": "resign_freedom",
+    "name": "世界那么大",
+    "emoji": "🌍",
+    "rarity": "rare",
+    "kind": "synergy",
+    "inputs": [
+      "resign",
+      "salary"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 25,
+    "freshGain": 30,
+    "weird": false,
+    "desc": "拿完工资就辞职 牛马の终极梦想"
+  },
+  {
+    "id": "durian_pizza",
+    "name": "榴莲披萨",
+    "emoji": "🍕",
+    "rarity": "uncommon",
+    "kind": "merge",
+    "inputs": [
+      "durian",
+      "pizza"
+    ],
+    "adjacency": "orthogonal",
+    "payout": 14,
+    "freshGain": 15,
+    "weird": true,
+    "desc": "暗黑联名 爱恨两极"
+  }
+]

@@ -1,0 +1,21 @@
+id,name,emoji,rarity,kind,inputs,adjacency,output,payout,fresh_gain,weird,desc
+longjiang,隆江猪脚饭,🍛,rare,eliminate,"worker,pig_trotter,rice",orthogonal,,20,30,false,牛马的命是隆江猪脚饭给的 三者消除爆20
+nine_intestine,九转大肠,🍢,rare,merge,"poop,intestine",orthogonal,intestine_clean,15,30,true,化腐朽为神奇 屎加大肠合成神菜
+tomato_egg,番茄炒蛋,🍳,common,merge,"tomato,egg",orthogonal,,6,8,false,永远的神 新手友好基础combo
+gaijiao,盖浇饭,🍚,common,merge,"rice,meat",orthogonal,,5,8,false,国民快餐 米饭加肉
+roach_bread,法式蟑螂酥,🥐,uncommon,merge,"cockroach,bread",orthogonal,,9,15,true,黑暗料理 酥脆多汁
+tech_dish,科技与狠活,🧪,uncommon,merge,"gutter_oil,meat",orthogonal,,10,15,true,地沟油加肉 产出翻倍但良心不安
+cant_tell,分不清,🍫,uncommon,merge,"poop,candy",orthogonal,,12,15,true,屎加糖 你自己品 高产出
+dragon_phoenix,龙凤呈祥,🐉,rare,merge,"dragon,phoenix",orthogonal,,40,30,false,顶级祥瑞 龙凤合体爆40
+boss_special,给老板上一道,🍽️,uncommon,synergy,"boss,poop",orthogonal,,8,15,true,整顿职场 本轮老板产出翻倍
+sashimi_combo,豪华刺身拼盘,🍣,rare,merge,"sashimi,caviar",orthogonal,,25,30,false,顶配生鲜 刺身加鱼子酱
+hotpot_feast,火锅盛宴,🍲,uncommon,merge,"hotpot,meat",orthogonal,,12,15,false,涮起来 火锅加肉
+midnight_snack,深夜食堂,🌃,uncommon,synergy,"overtime,instant_noodle",orthogonal,,10,15,false,加班加泡面 牛马の深夜慰藉
+sushi_set,寿司套餐,🍣,uncommon,merge,"sushi,fish",orthogonal,,11,15,false,有鱼的寿司 升级
+dumpling_vinegar,饺子蘸醋,🥟,common,synergy,"dumpling,vinegar",orthogonal,,8,8,false,绝配 饺子加醋
+burger_combo,汉堡套餐,🍔,uncommon,merge,"hamburger,fries",orthogonal,,12,15,false,汉堡薯条可乐 资本主义套餐
+stink_legend,臭味相投,💨,rare,merge,"stinky_tofu,century_egg",orthogonal,,18,30,true,臭豆腐加皮蛋 黑暗料理届の珠峰
+viral_dish,网红爆款菜,📸,rare,synergy,"influencer,cant_tell",orthogonal,,22,30,true,网红探店分不清 丑得出圈
+crypto_dream,财富自由,💸,rare,merge,"crypto,diamond",orthogonal,,30,30,false,梭哈成功 虚拟币加钻石
+resign_freedom,世界那么大,🌍,rare,synergy,"resign,salary",orthogonal,,25,30,false,拿完工资就辞职 牛马の终极梦想
+durian_pizza,榴莲披萨,🍕,uncommon,merge,"durian,pizza",orthogonal,,14,15,true,暗黑联名 爱恨两极

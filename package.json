@@ -1,0 +1,29 @@
+{
+  "name": "office-grub",
+  "version": "0.1.0",
+  "description": "牛马厨房 / Office Grub - 一个 Roguelike + 老虎机 黑色幽默吃饭游戏",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host",
+    "sync-data": "node scripts/csv-to-json.mjs",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "keywords": [
+    "pixijs",
+    "roguelike",
+    "slot-machine",
+    "game"
+  ],
+  "author": "rare1fy",
+  "license": "MIT",
+  "dependencies": {
+    "pixi.js": "^8.6.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}
