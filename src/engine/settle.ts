@@ -5,6 +5,9 @@ import { CONFIG } from '../data/config';
 /** 符号 id → 定义 的快速查表 */
 export const SYMBOL_MAP: Map<string, SymbolDef> = new Map(SYMBOLS.map((s) => [s.id, s]));
 
+/** 空格子哨兵：池中符号不足时填充，结算时被 SYMBOL_MAP 查空自动跳过，产出 0 */
+export const EMPTY = '';
+
 /** 网格上的一个格子 */
 export interface Cell {
   symbolId: string;
@@ -17,9 +20,9 @@ export interface Cell {
 /** 结算结果 */
 export interface SettleResult {
   cells: Cell[];
-  /** 本轮总产出 */
+  /** 本轮总产出（胃口） */
   total: number;
-  /** 本轮发生的合成（用于动画与回血） */
+  /** 本轮发生的合成（仅用于播放合成特效） */
   spawnedDishes: string[];
 }
 

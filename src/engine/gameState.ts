@@ -1,8 +1,8 @@
 import type { Rarity, SymbolDef, ItemDef } from '../data/types';
 import { SYMBOLS } from '../data/symbols';
 import { ITEMS } from '../data/items';
-import { CONFIG, demandForPeriod } from '../data/config';
-import { settle, type Cell, type SettleResult } from './settle';
+import { CONFIG, SLOT_COUNT, demandForPeriod } from '../data/config';
+import { settle, EMPTY, type Cell, type SettleResult } from './settle';
 
 /** 加权随机：从候选中按 weight 抽一个 */
 function weightedPick<T extends { weight: number }>(pool: T[]): T | null {
@@ -25,33 +25,70 @@ function rollRarity(weights: Record<Rarity, number>): Rarity {
   return 'rare';
 }
 
-export type GamePhase = 'spinning' | 'choosing' | 'settled' | 'gameover' | 'win';
+/** Fisher–Yates 洗牌（返回新数组，不改原数组） */
+function shuffle<T>(arr: readonly T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
-/** 游戏全局状态 */
+export type GamePhase = 'choosing' | 'spinning' | 'settled' | 'gameover';
+
+/** 一次营业（拉杆）的完整结果，供 UI 分步播放动画 */
+export interface DayResult {
+  /** 落定后的格子（含产出，空格 symbolId 为 EMPTY） */
+  cells: Cell[];
+  result: SettleResult;
+  /** 入账前的总胃口 */
+  appetiteBefore: number;
+  /** 入账后的总胃口 */
+  appetiteAfter: number;
+  /** 本次拉杆后是否到了需求结算时点 */
+  rentDue: boolean;
+}
+
+/** 需求结算结果 */
+export interface RentResult {
+  /** 本次需要交的胃口需求 */
+  demand: number;
+  /** 是否达标 */
+  passed: boolean;
+  /** 达标后剩余胃口 */
+  remaining: number;
+}
+
+/** 游戏全局状态：单一货币「胃口」 */
 export class GameState {
   symbolPool: string[] = [];
   counters: Map<string, number> = new Map();
   items: string[] = [];
-  discoveredDishes: Set<string> = new Set();
 
   period = 1;
   dayInPeriod = 0;
-  totalCoins = 0; // 当前周期累计营业额
-  freshness: number;
+  /** 总胃口（唯一货币，持久累计） */
+  appetite = 0;
   phase: GamePhase = 'choosing';
   lastResult: SettleResult | null = null;
 
   constructor() {
     this.symbolPool = [...CONFIG.startingSymbols];
-    this.freshness = CONFIG.freshness.start;
   }
 
+  /** 当前周期的胃口需求（等价房租） */
   get demand(): number {
     return demandForPeriod(this.period);
   }
 
   isGameOver(): boolean {
     return this.phase === 'gameover';
+  }
+
+  /** 距离下次需求结算还剩几天 */
+  get daysUntilRent(): number {
+    return CONFIG.daysPerPeriod - this.dayInPeriod;
   }
 
   /** 当前稀有度权重（随周期推进，rare 权重提升） */
@@ -61,57 +98,54 @@ export class GameState {
     return w;
   }
 
-  /** 老虎机：从符号池随机填满 5×4 */
+  /**
+   * 老虎机落定：洗牌符号池，取前 SLOT_COUNT 个填入格子，
+   * 池中符号不足时剩余格子留空（EMPTY）。复刻原版「牌库逐渐填满」手感。
+   */
   spin(): Cell[] {
-    const slots = CONFIG.cols * CONFIG.rows;
+    const shuffled = shuffle(this.symbolPool);
     const cells: Cell[] = [];
-    for (let i = 0; i < slots; i++) {
-      const id = this.symbolPool[Math.floor(Math.random() * this.symbolPool.length)] ?? 'rice';
+    for (let i = 0; i < SLOT_COUNT; i++) {
+      const id = shuffled[i] ?? EMPTY;
       cells.push({ symbolId: id, output: 0, destroyed: false });
     }
     return cells;
   }
 
-  /** 营业一天：转动 + 结算 + 推进胃口 */
-  businessDay(): { cells: Cell[]; result: SettleResult } {
+  /** 营业一天：拉杆落定 + 结算 + 胃口入账 + 推进天数 */
+  businessDay(): DayResult {
+    const appetiteBefore = this.appetite;
     const cells = this.spin();
     const result = settle(cells, this.counters);
     this.lastResult = result;
-    this.totalCoins += result.total;
+    this.appetite += result.total;
     this.dayInPeriod += 1;
-
-    // 新鲜感：消耗 + 新菜回血
-    const fresh = CONFIG.freshness;
-    this.freshness -= fresh.costPerDay;
-    for (const dishId of result.spawnedDishes) {
-      if (!this.discoveredDishes.has(dishId)) {
-        this.discoveredDishes.add(dishId);
-        this.freshness = Math.min(fresh.max, this.freshness + fresh.newDishReward);
-      }
-    }
-    if (this.freshness <= 0) {
-      this.phase = 'gameover';
-    }
-    return { cells, result };
+    this.phase = 'settled';
+    return {
+      cells,
+      result,
+      appetiteBefore,
+      appetiteAfter: this.appetite,
+      rentDue: this.dayInPeriod >= CONFIG.daysPerPeriod,
+    };
   }
 
-  /** 一个考核周期是否结束 */
-  get periodFinished(): boolean {
-    return this.dayInPeriod >= CONFIG.daysPerPeriod;
-  }
-
-  /** 结算考核：达标进入下一周期，不达标 game over */
-  checkPeriod(): boolean {
-    const passed = this.totalCoins >= this.demand;
+  /**
+   * 需求结算（等价交房租）：总胃口 ≥ 需求则扣除、需求涨价、进入下一周期；
+   * 否则游戏结束。这是唯一的失败判定。
+   */
+  settleRent(): RentResult {
+    const demand = this.demand;
+    const passed = this.appetite >= demand;
     if (passed) {
+      this.appetite -= demand;
       this.period += 1;
       this.dayInPeriod = 0;
-      this.totalCoins = 0;
       this.phase = 'choosing';
     } else {
       this.phase = 'gameover';
     }
-    return passed;
+    return { demand, passed, remaining: this.appetite };
   }
 
   /** 生成三选一候选符号 */
@@ -135,6 +169,15 @@ export class GameState {
   /** 加入符号到池 */
   addSymbol(id: string): void {
     this.symbolPool.push(id);
+  }
+
+  /** 当前符号池按 id 聚合的数量（用于符号库展示） */
+  poolCounts(): Map<string, number> {
+    const counts = new Map<string, number>();
+    for (const id of this.symbolPool) {
+      counts.set(id, (counts.get(id) ?? 0) + 1);
+    }
+    return counts;
   }
 
   /** 生成道具候选 */
