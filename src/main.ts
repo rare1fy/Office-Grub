@@ -4,9 +4,8 @@ import { GameScene } from './ui/gameScene';
 
 const { DESIGN_WIDTH, DESIGN_HEIGHT } = THEME;
 
-async function bootstrap(): Promise<void> {
-  const app = new Application();
-  await app.init({
+function bootstrap(): void {
+  const app = new Application({
     width: DESIGN_WIDTH,
     height: DESIGN_HEIGHT,
     backgroundColor: THEME.bg,
@@ -17,7 +16,7 @@ async function bootstrap(): Promise<void> {
 
   const mount = document.getElementById('app');
   if (!mount) throw new Error('#app not found');
-  mount.appendChild(app.canvas);
+  mount.appendChild(app.view as HTMLCanvasElement);
 
   // 设计分辨率舞台，按屏幕等比缩放（contain，保持竖屏比例）
   const stage = new Container();
@@ -30,18 +29,13 @@ async function bootstrap(): Promise<void> {
     const sw = window.innerWidth;
     const sh = window.innerHeight;
     const scale = Math.min(sw / DESIGN_WIDTH, sh / DESIGN_HEIGHT);
-    const realW = DESIGN_WIDTH * scale;
-    const realH = DESIGN_HEIGHT * scale;
-    app.renderer.resize(realW, realH);
-    stage.scale.set(scale);
-    app.canvas.style.width = `${realW}px`;
-    app.canvas.style.height = `${realH}px`;
+    const canvas = app.view as HTMLCanvasElement;
+    canvas.style.width = `${DESIGN_WIDTH * scale}px`;
+    canvas.style.height = `${DESIGN_HEIGHT * scale}px`;
   }
 
   resize();
   window.addEventListener('resize', resize);
 }
 
-bootstrap().catch((err) => {
-  console.error('启动失败：', err);
-});
+bootstrap();

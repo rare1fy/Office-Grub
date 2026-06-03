@@ -10,7 +10,10 @@ const { DESIGN_WIDTH: W, DESIGN_HEIGHT: H } = THEME;
 /** 创建一个圆角面板 */
 function panel(w: number, h: number, fill: number, border: number, radius = 16): Graphics {
   const g = new Graphics();
-  g.roundRect(0, 0, w, h, radius).fill(fill).stroke({ width: 4, color: border });
+  g.lineStyle(4, border);
+  g.beginFill(fill);
+  g.drawRoundedRect(0, 0, w, h, radius);
+  g.endFill();
   return g;
 }
 
@@ -22,7 +25,7 @@ function makeText(str: string, size: number, color: number, bold = true): Text {
     fontWeight: bold ? '700' : '400',
     align: 'center',
   });
-  return new Text({ text: str, style });
+  return new Text(str, style);
 }
 
 export class GameScene {
@@ -62,7 +65,9 @@ export class GameScene {
 
   private buildBackground(): Graphics {
     const g = new Graphics();
-    g.rect(0, 0, W, H).fill(THEME.bg);
+    g.beginFill(THEME.bg);
+    g.drawRect(0, 0, W, H);
+    g.endFill();
     return g;
   }
 
@@ -98,7 +103,9 @@ export class GameScene {
 
     // 新鲜感条
     const freshBg = new Graphics();
-    freshBg.roundRect(0, 0, W - 200, 28, 14).fill(0xe0e0e0);
+    freshBg.beginFill(0xe0e0e0);
+    freshBg.drawRoundedRect(0, 0, W - 200, 28, 14);
+    freshBg.endFill();
     freshBg.position.set(64, 218);
     this.hudLayer.addChild(freshBg);
 
@@ -124,7 +131,9 @@ export class GameScene {
     const barW = W - 200;
     this.freshFill.clear();
     const color = ratio > 0.4 ? THEME.freshBar : THEME.red;
-    this.freshFill.roundRect(0, 0, barW * ratio, 28, 14).fill(color);
+    this.freshFill.beginFill(color);
+    this.freshFill.drawRoundedRect(0, 0, barW * ratio, 28, 14);
+    this.freshFill.endFill();
     this.freshText.text = `😋 新鲜感 ${Math.max(0, g.freshness)}`;
   }
 
@@ -146,7 +155,10 @@ export class GameScene {
       node.position.set(x, y);
 
       const cellBg = new Graphics();
-      cellBg.roundRect(0, 0, this.cellSize, this.cellSize, 12).fill(THEME.cellBg).stroke({ width: 3, color: THEME.cellBorder });
+      cellBg.lineStyle(3, THEME.cellBorder);
+      cellBg.beginFill(THEME.cellBg);
+      cellBg.drawRoundedRect(0, 0, this.cellSize, this.cellSize, 12);
+      cellBg.endFill();
       node.addChild(cellBg);
 
       const emoji = makeText('', this.cellSize * 0.5, THEME.textDark);
@@ -172,7 +184,10 @@ export class GameScene {
     const w = W - 120;
     const h = 88;
     const g = new Graphics();
-    g.roundRect(0, 0, w, h, 44).fill(THEME.accent).stroke({ width: 5, color: 0xffffff });
+    g.lineStyle(5, 0xffffff);
+    g.beginFill(THEME.accent);
+    g.drawRoundedRect(0, 0, w, h, 44);
+    g.endFill();
     btn.addChild(g);
     const label = makeText('🍳 开张营业', 36, THEME.textLight);
     label.anchor.set(0.5);
@@ -247,7 +262,9 @@ export class GameScene {
     const choices = this.game.rollChoices(3);
 
     const mask = new Graphics();
-    mask.rect(0, 0, W, H).fill({ color: 0x000000, alpha: 0.5 });
+    mask.beginFill(0x000000, 0.5);
+    mask.drawRect(0, 0, W, H);
+    mask.endFill();
     this.overlayLayer.addChild(mask);
 
     const titleY = 360;
@@ -278,7 +295,9 @@ export class GameScene {
     // 跳过按钮
     const skip = new Container();
     const sg = new Graphics();
-    sg.roundRect(0, 0, 200, 56, 28).fill(0xbdbdbd);
+    sg.beginFill(0xbdbdbd);
+    sg.drawRoundedRect(0, 0, 200, 56, 28);
+    sg.endFill();
     skip.addChild(sg);
     const sl = makeText('跳过', 26, THEME.textLight);
     sl.anchor.set(0.5);
@@ -328,7 +347,9 @@ export class GameScene {
   private showGameOver(): void {
     this.overlayLayer.removeChildren();
     const mask = new Graphics();
-    mask.rect(0, 0, W, H).fill({ color: 0x000000, alpha: 0.75 });
+    mask.beginFill(0x000000, 0.75);
+    mask.drawRect(0, 0, W, H);
+    mask.endFill();
     this.overlayLayer.addChild(mask);
 
     const box = panel(W - 120, 360, THEME.panel, THEME.red, 24);
@@ -353,7 +374,9 @@ export class GameScene {
 
     const btn = new Container();
     const g = new Graphics();
-    g.roundRect(0, 0, 240, 72, 36).fill(THEME.accent);
+    g.beginFill(THEME.accent);
+    g.drawRoundedRect(0, 0, 240, 72, 36);
+    g.endFill();
     btn.addChild(g);
     const bl = makeText('🔄 再开一家', 30, THEME.textLight);
     bl.anchor.set(0.5);

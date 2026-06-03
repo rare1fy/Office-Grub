@@ -19,7 +19,7 @@
   "author": "rare1fy",
   "license": "MIT",
   "dependencies": {
-    "pixi.js": "^8.6.6"
+    "pixi.js": "~7.4.2"
   },
   "devDependencies": {
     "gh-pages": "^6.2.0",
